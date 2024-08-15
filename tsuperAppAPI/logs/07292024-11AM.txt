@@ -1,0 +1,99 @@
+
+{
+  "date": "07/29/2024 11:47 AM",
+  "file": "mysqlcontroller.js",
+  "data": "16,Driver",
+  "function": "crud > selectAllQuery - 2",
+  "error_desc": "[notification.js -> fetchNotif()] Error: ER_NO_SUCH_TABLE: Table 'tsuperdb.notification' doesn't exist"
+}
+{
+  "date": "07/29/2024 11:47 AM",
+  "file": "mysqlcontroller.js",
+  "data": "16",
+  "function": "crud > selectAllQuery - 2",
+  "error_desc": "[findbooking.js -> acceptSpecialBooking(2)] Error: ER_BAD_FIELD_ERROR: Unknown column 'DateEnd' in 'field list'"
+}
+{
+  "date": "07/29/2024 11:47 AM",
+  "file": "mysqlcontroller.js",
+  "data": "Driver Booking",
+  "function": "crud > selectAllQuery - 2",
+  "error_desc": "[findbooking.js -> findBookingList()] Error: ER_BAD_FIELD_ERROR: Unknown column 'DateEnd' in 'field list'"
+}
+{
+  "date": "07/29/2024 11:47 AM",
+  "file": "mysqlcontroller.js",
+  "data": "NewSig CarrOwner,25",
+  "function": "crud > selectAllQuery - 2",
+  "error_desc": "[booking.js -> findPendingBooking()] Error: ER_BAD_FIELD_ERROR: Unknown column 'DateEnd' in 'field list'"
+}
+{
+  "date": "07/29/2024 11:47 AM",
+  "file": "mysqlcontroller.js",
+  "data": "NewSig CarrOwner,25",
+  "function": "crud > selectAllQuery - 2",
+  "error_desc": "[booking.js -> findPendingBooking()] Error: ER_BAD_FIELD_ERROR: Unknown column 'DateEnd' in 'field list'"
+}
+{
+  "date": "07/29/2024 11:47 AM",
+  "file": "mysqlcontroller.js",
+  "data": "Driver Booking",
+  "function": "crud > selectAllQuery - 2",
+  "error_desc": "[findbooking.js -> findBookingList()] Error: ER_BAD_FIELD_ERROR: Unknown column 'DateEnd' in 'field list'"
+}
+{
+  "date": "07/29/2024 11:47 AM",
+  "file": "mysqlcontroller.js",
+  "data": "NewSig CarrOwner,25",
+  "function": "crud > selectAllQuery - 2",
+  "error_desc": "[booking.js -> findPendingBooking()] Error: ER_BAD_FIELD_ERROR: Unknown column 'DateEnd' in 'field list'"
+}
+{
+  "date": "07/29/2024 11:47 AM",
+  "file": "mysqlcontroller.js",
+  "data": "NewSig CarrOwner,25",
+  "function": "crud > selectAllQuery - 2",
+  "error_desc": "[booking.js -> findPendingBooking()] Error: ER_BAD_FIELD_ERROR: Unknown column 'DateEnd' in 'field list'"
+}
+{
+  "date": "07/29/2024 11:48 AM",
+  "file": "mysqlcontroller.js",
+  "data": "16",
+  "function": "crud > selectAllQuery - 2",
+  "error_desc": "[match.js -> getMatchUser()] Error: ER_NO_SUCH_TABLE: Table 'tsuperdb.match_users' doesn't exist"
+}
+{
+  "date": "07/29/2024 11:48 AM",
+  "file": "mysqlcontroller.js",
+  "data": "17,Driver",
+  "function": "crud > selectAllQuery - 2",
+  "error_desc": "[notification.js -> fetchNotif()] Error: ER_NO_SUCH_TABLE: Table 'tsuperdb.notification' doesn't exist"
+}
+{
+  "date": "07/29/2024 11:48 AM",
+  "file": "mysqlcontroller.js",
+  "data": "17",
+  "function": "crud > selectAllQuery - 2",
+  "error_desc": "[findbooking.js -> acceptSpecialBooking(2)] Error: ER_BAD_FIELD_ERROR: Unknown column 'DateEnd' in 'field list'"
+}
+{
+  "date": "07/29/2024 11:48 AM",
+  "file": "mysqlcontroller.js",
+  "data": "Driver Booking",
+  "function": "crud > selectAllQuery - 2",
+  "error_desc": "[findbooking.js -> findBookingList()] Error: ER_BAD_FIELD_ERROR: Unknown column 'DateEnd' in 'field list'"
+}
+{
+  "date": "07/29/2024 11:57 AM",
+  "file": "mysqlcontroller.js",
+  "data": "17,Driver",
+  "function": "crud > selectAllQuery - 2",
+  "error_desc": "[notification.js -> fetchNotif()] Error: ER_NO_SUCH_TABLE: Table 'tsuperdb.notification' doesn't exist"
+}
+{
+  "date": "07/29/2024 11:57 AM",
+  "file": "mysqlcontroller.js",
+  "data": "17",
+  "function": "crud > selectAllQuery - 2",
+  "error_desc": "[findbooking.js -> acceptSpecialBooking(2)] Error: ER_BAD_FIELD_ERROR: Unknown column 'DateEnd' in 'field list'"
+}

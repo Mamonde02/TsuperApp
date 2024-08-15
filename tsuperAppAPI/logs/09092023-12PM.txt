@@ -1,0 +1,29 @@
+
+{
+  "date": "09/09/2023 12:37 AM",
+  "file": "mysqlcontroller.js",
+  "data": "",
+  "function": "crud > updateQuery - 1",
+  "error_desc": "[votes.js -> updateParticipantTotalVote()] Error: connect ECONNREFUSED ::1:8080"
+}
+{
+  "date": "09/09/2023 12:37 AM",
+  "file": "mysqlcontroller.js",
+  "data": "",
+  "function": "crud > updateQuery - 1",
+  "error_desc": "[votes.js -> updateParticipantTotalVote()] Error: connect ECONNREFUSED ::1:8080"
+}
+{
+  "date": "09/09/2023 12:39 AM",
+  "file": "mysqlcontroller.js",
+  "data": "",
+  "function": "crud > updateQuery - 1",
+  "error_desc": "[votes.js -> updateParticipantTotalVote()] Error: connect ECONNREFUSED ::1:8080"
+}
+{
+  "date": "09/09/2023 12:40 AM",
+  "file": "mysqlcontroller.js",
+  "data": "",
+  "function": "crud > updateQuery - 1",
+  "error_desc": "[votes.js -> updateParticipantTotalVote()] Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root@localhost'@'localhost' (using password: NO)"
+}
