@@ -1,0 +1,43 @@
+
+{
+  "date": "12/25/2023 05:57 PM",
+  "file": "mysqlcontroller.js",
+  "data": "Driver-Sig,17,Driver Booking,Driver-Sig,17,Driver Booking",
+  "function": "crud > selectAllQuery - 2",
+  "error_desc": "[booking.js -> viewHistory()] Error: ER_NO_SUCH_TABLE: Table 'tsuperdb.booking_2023_12' doesn't exist"
+}
+{
+  "date": "12/25/2023 05:57 PM",
+  "file": "mysqlcontroller.js",
+  "data": "Driver-Sig,17,Driver Booking,Driver-Sig,17,Driver Booking",
+  "function": "crud > selectAllQuery - 2",
+  "error_desc": "[booking.js -> viewHistory()] Error: ER_NO_SUCH_TABLE: Table 'tsuperdb.booking_2023_12' doesn't exist"
+}
+{
+  "date": "12/25/2023 05:57 PM",
+  "file": "mysqlcontroller.js",
+  "data": "Driver-Sig,17,Driver Booking,Driver-Sig,17,Driver Booking",
+  "function": "crud > selectAllQuery - 2",
+  "error_desc": "[booking.js -> viewHistory()] Error: ER_NO_SUCH_TABLE: Table 'tsuperdb.booking_2023_12' doesn't exist"
+}
+{
+  "date": "12/25/2023 05:57 PM",
+  "file": "mysqlcontroller.js",
+  "data": "Driver-Sig,17,Driver Booking,Driver-Sig,17,Driver Booking",
+  "function": "crud > selectAllQuery - 2",
+  "error_desc": "[booking.js -> viewHistory()] Error: ER_NO_SUCH_TABLE: Table 'tsuperdb.booking_2023_12' doesn't exist"
+}
+{
+  "date": "12/25/2023 05:58 PM",
+  "file": "mysqlcontroller.js",
+  "data": "Driver-Sig,17,Driver Booking,Driver-Sig,17,Driver Booking",
+  "function": "crud > selectAllQuery - 2",
+  "error_desc": "[booking.js -> viewHistory()] Error: ER_NO_SUCH_TABLE: Table 'tsuperdb.booking_2023_12' doesn't exist"
+}
+{
+  "date": "12/25/2023 05:59 PM",
+  "file": "mysqlcontroller.js",
+  "data": "Driver-Sig,17,Driver Booking,Driver-Sig,17,Driver Booking",
+  "function": "crud > selectAllQuery - 2",
+  "error_desc": "[booking.js -> viewHistory()] Error: ER_NO_SUCH_TABLE: Table 'tsuperdb.booking_2023_12' doesn't exist"
+}

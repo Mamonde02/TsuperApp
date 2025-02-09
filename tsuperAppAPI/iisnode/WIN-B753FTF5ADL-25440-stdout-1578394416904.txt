@@ -1,0 +1,20 @@
+App listening on port 8084
+::ffff:172.16.16.177 - - [07/Jan/2020:10:53:59 +0000] "POST /devices HTTP/1.1" 404 147 "-" "okhttp/3.12.0"
+::ffff:172.16.16.163 - - [07/Jan/2020:10:55:35 +0000] "POST /delete/ HTTP/1.1" 404 147 "-" "Dalvik/2.1.0 (Linux; U; Android 9; TA-1021 Build/PKQ1.181105.001)"
+::ffff:172.16.16.163 - - [07/Jan/2020:10:56:36 +0000] "POST /devices HTTP/1.1" 404 147 "-" "okhttp/3.12.0"
+::ffff:172.16.16.163 - - [07/Jan/2020:10:56:37 +0000] "POST /devices HTTP/1.1" 404 147 "-" "okhttp/3.12.0"
+HRE NI RESPONSE SILA
+UPDATE RESULTtrue
+HERERtrue
+55542760119000012|79242760000100119|ONPROCESS|GK RFID
+GROSS AMOUNT10
+B00032|2A347C12|3701235223123501|14750053
+=========================================GKRFIDRELOADWALLET:::2020:::01:::141486671234:::RIZAL:::B00032:::PAY VIA CARD:::EGHL:::79242760000100119
+++++++++++++++++5554276011900001279242760000100119ONPROCESSCOMPLETED<eghlnote>000 - Success.</eghlnote>
+::ffff:172.16.16.129 - - [07/Jan/2020:10:56:44 +0000] "POST /api/getEghlResult HTTP/1.1" 200 85 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36"
+::ffff:172.16.16.163 - - [07/Jan/2020:10:56:46 +0000] "POST /delete/ HTTP/1.1" 404 147 "-" "Dalvik/2.1.0 (Linux; U; Android 9; TA-1021 Build/PKQ1.181105.001)"
+HRE NI RESPONSE SILA
+UPDATE RESULTfalse
+HERERfalse
+55542760119000012|79242760000100119|ONPROCESS|GK RFID
+::ffff:172.16.16.129 - - [07/Jan/2020:10:57:39 +0000] "POST /api/getEghlResult HTTP/1.1" 200 92 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36"

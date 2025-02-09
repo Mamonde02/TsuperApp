@@ -1,0 +1,29 @@
+
+{
+  "date": "02/09/2025 10:15 PM",
+  "file": "mysqlcontroller.js",
+  "data": "",
+  "function": "crud > selectAllQuery - 1",
+  "error_desc": "[chat.js -> fetchAdminSupport()] Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: NO)"
+}
+{
+  "date": "02/09/2025 10:20 PM",
+  "file": "mysqlcontroller.js",
+  "data": "john dalton",
+  "function": "crud > selectAllQuery - 1",
+  "error_desc": "[chat.js -> fetchMatchChatList()] Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: NO)"
+}
+{
+  "date": "02/09/2025 10:24 PM",
+  "file": "mysqlcontroller.js",
+  "data": "",
+  "function": "crud > selectAllQuery - 1",
+  "error_desc": "[chat.js -> fetchAdminSupport()] Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: NO)"
+}
+{
+  "date": "02/09/2025 10:27 PM",
+  "file": "mysqlcontroller.js",
+  "data": "",
+  "function": "crud > selectAllQuery - 1",
+  "error_desc": "[chat.js -> fetchAdminSupport()] Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: NO)"
+}

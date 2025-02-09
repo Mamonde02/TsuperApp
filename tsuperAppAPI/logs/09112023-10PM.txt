@@ -1,0 +1,15 @@
+
+{
+  "date": "09/11/2023 10:17 PM",
+  "file": "mysqlcontroller.js",
+  "data": "1,516b9783fca517eecbd1d064da2d165310b19759,Driver",
+  "function": "crud > selectAllQuery - 1",
+  "error_desc": "[account.js -> loginTsuper()] Error: connect ECONNREFUSED 127.0.0.1:3306"
+}
+{
+  "date": "09/11/2023 10:18 PM",
+  "file": "mysqlcontroller.js",
+  "data": "1,516b9783fca517eecbd1d064da2d165310b19759,Driver",
+  "function": "crud > selectAllQuery - 1",
+  "error_desc": "[account.js -> loginTsuper()] Error: connect ECONNREFUSED 127.0.0.1:3306"
+}

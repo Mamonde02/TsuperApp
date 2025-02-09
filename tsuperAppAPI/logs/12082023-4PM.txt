@@ -1,0 +1,22 @@
+
+{
+  "date": "12/08/2023 04:56 PM",
+  "file": "mysqlcontroller.js",
+  "data": "Car-Sig,16,Car Owner Booking,Car-Sig,16,Car Owner Booking",
+  "function": "crud > selectAllQuery - 2",
+  "error_desc": "[booking.js -> viewHistory()] Error: ER_NO_SUCH_TABLE: Table 'tsuperdb.booking_2023_12' doesn't exist"
+}
+{
+  "date": "12/08/2023 04:56 PM",
+  "file": "mysqlcontroller.js",
+  "data": "Car-Sig,16,Car Owner Booking,Car-Sig,16,Car Owner Booking",
+  "function": "crud > selectAllQuery - 2",
+  "error_desc": "[booking.js -> viewHistory()] Error: ER_NO_SUCH_TABLE: Table 'tsuperdb.booking_2023_12' doesn't exist"
+}
+{
+  "date": "12/08/2023 04:57 PM",
+  "file": "mysqlcontroller.js",
+  "data": "Car-Sig,16,Car Owner Booking,Car-Sig,16,Car Owner Booking",
+  "function": "crud > selectAllQuery - 2",
+  "error_desc": "[booking.js -> viewHistory()] Error: ER_NO_SUCH_TABLE: Table 'tsuperdb.booking_2023_12' doesn't exist"
+}

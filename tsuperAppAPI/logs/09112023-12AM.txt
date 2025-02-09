@@ -1,0 +1,22 @@
+
+{
+  "date": "09/11/2023 12:52 AM",
+  "file": "mysqlcontroller.js",
+  "data": "09202384459615,Tamiya Terminal, Mepz 2 Compound, Lapu-Lapu City, Cebu, Philippines:::10.3015189:::123.963231##Mactan-Cebu International Airport (CEB), Lapu-Lapu Airport Road, Lapu-Lapu City, Cebu, Philippines:::10.3131063:::123.976449,09/11/2023,DropOff,Driver Booking,110,1.94,.,Driver-Sig,17,PENDING",
+  "function": "crud > insertQuery - 2",
+  "error_desc": "[booking.js -> registerTsuper()] Error: ER_BAD_FIELD_ERROR: Unknown column 'Distance' in 'field list'"
+}
+{
+  "date": "09/11/2023 12:56 AM",
+  "file": "mysqlcontroller.js",
+  "data": "Driver-Sig,17,09,2023",
+  "function": "crud > insertQuery - 2",
+  "error_desc": "[booking.js -> viewHistory()] Error: ER_BAD_FIELD_ERROR: Unknown column 'TransactionNo' in 'field list'"
+}
+{
+  "date": "09/11/2023 12:56 AM",
+  "file": "mysqlcontroller.js",
+  "data": "Driver-Sig,17,09,2023",
+  "function": "crud > insertQuery - 2",
+  "error_desc": "[booking.js -> viewHistory()] Error: ER_BAD_FIELD_ERROR: Unknown column 'TransactionNo' in 'field list'"
+}

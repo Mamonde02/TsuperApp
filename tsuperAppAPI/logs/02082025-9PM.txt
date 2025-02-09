@@ -1,0 +1,155 @@
+
+{
+  "date": "02/08/2025 09:13 PM",
+  "file": "mysqlcontroller.js",
+  "data": "jj,dalton,johnn@gmail.com,p,0912354,Driver",
+  "function": "crud > insertQuery - 2",
+  "error_desc": "[account.js -> registerTsuper()] Error: ER_NO_DEFAULT_FOR_FIELD: Field 'CurrentAddress' doesn't have a default value"
+}
+{
+  "date": "02/08/2025 09:13 PM",
+  "file": "mysqlcontroller.js",
+  "data": "jj,dalton,johnn@gmail.com,p,0912354,Driver",
+  "function": "crud > insertQuery - 2",
+  "error_desc": "[account.js -> registerTsuper()] Error: ER_NO_DEFAULT_FOR_FIELD: Field 'CurrentAddress' doesn't have a default value"
+}
+{
+  "date": "02/08/2025 09:14 PM",
+  "file": "mysqlcontroller.js",
+  "data": "jj,dalton,johnn@gmail.com,p,0912354,Driver",
+  "function": "crud > insertQuery - 2",
+  "error_desc": "[account.js -> registerTsuper()] Error: ER_NO_DEFAULT_FOR_FIELD: Field 'CurrentAddress' doesn't have a default value"
+}
+{
+  "date": "02/08/2025 09:14 PM",
+  "file": "mysqlcontroller.js",
+  "data": "jj,dalton,johnn@gmail.com,p,0912354,Driver",
+  "function": "crud > insertQuery - 2",
+  "error_desc": "[account.js -> registerTsuper()] Error: ER_NO_DEFAULT_FOR_FIELD: Field 'CurrentAddress' doesn't have a default value"
+}
+{
+  "date": "02/08/2025 09:14 PM",
+  "file": "mysqlcontroller.js",
+  "data": "jj,dalton,johnn@gmail.com,p,0912354,Driver",
+  "function": "crud > insertQuery - 2",
+  "error_desc": "[account.js -> registerTsuper()] Error: ER_NO_DEFAULT_FOR_FIELD: Field 'CurrentAddress' doesn't have a default value"
+}
+{
+  "date": "02/08/2025 09:15 PM",
+  "file": "mysqlcontroller.js",
+  "data": "jj,dalton,johnn@gmail.com,p,0912354,Driver",
+  "function": "crud > insertQuery - 2",
+  "error_desc": "[account.js -> registerTsuper()] Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?)' at line 1"
+}
+{
+  "date": "02/08/2025 09:16 PM",
+  "file": "mysqlcontroller.js",
+  "data": "jj,dalton,johnn@gmail.com,p,0912354,Driver,",
+  "function": "crud > insertQuery - 2",
+  "error_desc": "[account.js -> registerTsuper()] Error: ER_NO_DEFAULT_FOR_FIELD: Field 'CurrentAddress' doesn't have a default value"
+}
+{
+  "date": "02/08/2025 09:18 PM",
+  "file": "mysqlcontroller.js",
+  "data": "jj,dalton,johnn@gmail.com,p,0912354,Driver,Active",
+  "function": "crud > insertQuery - 2",
+  "error_desc": "[account.js -> registerTsuper()] Error: ER_NO_DEFAULT_FOR_FIELD: Field 'CurrentAddress' doesn't have a default value"
+}
+{
+  "date": "02/08/2025 09:23 PM",
+  "file": "mysqlcontroller.js",
+  "data": "jj,dalton,johnn@gmail.com,p,0912354,Driver,Active",
+  "function": "crud > insertQuery - 2",
+  "error_desc": "[account.js -> registerTsuper()] Error: ER_NO_DEFAULT_FOR_FIELD: Field 'CurrentAddress' doesn't have a default value"
+}
+{
+  "date": "02/08/2025 09:25 PM",
+  "file": "mysqlcontroller.js",
+  "data": "jj,dalton,johnn@gmail.com,p,09123458,Driver,Active",
+  "function": "crud > insertQuery - 2",
+  "error_desc": "[account.js -> registerTsuper()] Error: ER_NO_DEFAULT_FOR_FIELD: Field 'CurrentAddress' doesn't have a default value"
+}
+{
+  "date": "02/08/2025 09:25 PM",
+  "file": "mysqlcontroller.js",
+  "data": "jj,dalton,johnn@gmail.com,p,091234582,Driver,Active",
+  "function": "crud > insertQuery - 2",
+  "error_desc": "[account.js -> registerTsuper()] Error: ER_NO_DEFAULT_FOR_FIELD: Field 'CurrentAddress' doesn't have a default value"
+}
+{
+  "date": "02/08/2025 09:27 PM",
+  "file": "mysqlcontroller.js",
+  "data": "jj,dalton,johnn@gmail.com,p,091234582,Driver,Active",
+  "function": "crud > insertQuery - 2",
+  "error_desc": "[account.js -> registerTsuper()] Error: ER_NO_DEFAULT_FOR_FIELD: Field 'CurrentAddress' doesn't have a default value"
+}
+{
+  "date": "02/08/2025 09:27 PM",
+  "file": "mysqlcontroller.js",
+  "data": "jj,dalton,johnn@gmail.com,p,091234582,Driver,Active",
+  "function": "crud > insertQuery - 2",
+  "error_desc": "[account.js -> registerTsuper()] Error: ER_NO_DEFAULT_FOR_FIELD: Field 'CurrentAddress' doesn't have a default value"
+}
+{
+  "date": "02/08/2025 09:31 PM",
+  "file": "mysqlcontroller.js",
+  "data": "jj,dalton,johnn@gmail.com,p,091234582,Driver,Active",
+  "function": "crud > insertQuery - 2",
+  "error_desc": "[account.js -> registerTsuper()] Error: ER_NO_DEFAULT_FOR_FIELD: Field 'CurrentAddress' doesn't have a default value"
+}
+{
+  "date": "02/08/2025 09:35 PM",
+  "file": "mysqlcontroller.js",
+  "data": "jj,dalton,johnn@gmail.com,p,091234582,Driver",
+  "function": "crud > insertQuery - 2",
+  "error_desc": "[account.js -> registerTsuper()] Error: ER_NO_DEFAULT_FOR_FIELD: Field 'CurrentAddress' doesn't have a default value"
+}
+{
+  "date": "02/08/2025 09:36 PM",
+  "file": "mysqlcontroller.js",
+  "data": "jj,dalton,johnn@gmail.com,p,091234582,Driver",
+  "function": "crud > insertQuery - 2",
+  "error_desc": "[account.js -> registerTsuper()] Error: ER_NO_DEFAULT_FOR_FIELD: Field 'CurrentAddress' doesn't have a default value"
+}
+{
+  "date": "02/08/2025 09:39 PM",
+  "file": "mysqlcontroller.js",
+  "data": "jj,dalton,johnn@gmail.com,p,091234582,Driver",
+  "function": "crud > insertQuery - 2",
+  "error_desc": "[account.js -> registerTsuper()] Error: ER_NO_DEFAULT_FOR_FIELD: Field 'CurrentAddress' doesn't have a default value"
+}
+{
+  "date": "02/08/2025 09:39 PM",
+  "file": "mysqlcontroller.js",
+  "data": "jj,dalton,johnn@gmail.com,p,091234582,Driver",
+  "function": "crud > insertQuery - 2",
+  "error_desc": "[account.js -> registerTsuper()] Error: ER_NO_DEFAULT_FOR_FIELD: Field 'CurrentAddress' doesn't have a default value"
+}
+{
+  "date": "02/08/2025 09:39 PM",
+  "file": "mysqlcontroller.js",
+  "data": "jj,dalton,johnn@gmail.com,p,091234582,Driver",
+  "function": "crud > insertQuery - 2",
+  "error_desc": "[account.js -> registerTsuper()] Error: ER_NO_DEFAULT_FOR_FIELD: Field 'CurrentAddress' doesn't have a default value"
+}
+{
+  "date": "02/08/2025 09:39 PM",
+  "file": "mysqlcontroller.js",
+  "data": "jj,dalton,johnn@gmail.com,p,091234582,Driver",
+  "function": "crud > insertQuery - 2",
+  "error_desc": "[account.js -> registerTsuper()] Error: ER_NO_DEFAULT_FOR_FIELD: Field 'CurrentAddress' doesn't have a default value"
+}
+{
+  "date": "02/08/2025 09:48 PM",
+  "file": "mysqlcontroller.js",
+  "data": "ray,vale,je@gmail.com,b1b3773a05c0ed0176787a4f1574ff0075f7521e,12345678999,Driver",
+  "function": "crud > insertQuery - 2",
+  "error_desc": "[account.js -> registerTsuper()] Error: ER_NO_DEFAULT_FOR_FIELD: Field 'CurrentAddress' doesn't have a default value"
+}
+{
+  "date": "02/08/2025 09:55 PM",
+  "file": "mysqlcontroller.js",
+  "data": "ray,vale,je@gmail.com,b1b3773a05c0ed0176787a4f1574ff0075f7521e,12345678999,Driver",
+  "function": "crud > insertQuery - 2",
+  "error_desc": "[account.js -> registerTsuper()] Error: ER_NO_DEFAULT_FOR_FIELD: Field 'CurrentAddress' doesn't have a default value"
+}

@@ -1,0 +1,8 @@
+
+{
+  "date": "02/09/2025 08:14 PM",
+  "file": "mysqlcontroller.js",
+  "data": "",
+  "function": "crud > selectAllQuery - 1",
+  "error_desc": "[chat.js -> chatTopic()] Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: NO)"
+}
