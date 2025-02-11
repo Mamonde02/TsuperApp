@@ -1,4 +1,5 @@
 var mysql = require('mysql');
+require('dotenv').config();
 
 var connection = {
     tsuper_connect  : mysql.createPool({
@@ -6,7 +7,7 @@ var connection = {
         host            : '127.0.0.1',
         port            :  3306,
         user            : 'root',
-        password        : 'valeroso',
+        password        :  process.env.DB_PASSWORD,
         database        : 'tsuperdb',
         debug           :  false
     }),
