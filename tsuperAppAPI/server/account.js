@@ -91,7 +91,7 @@ exports.registerTsuper = function (req, res) {
 	var legalinfo = JSON.stringify(body.legalinfo)
 
 	    // Check if all fields are filled before querying
-		if (!fname || !lname || !phone || !email || !pwd || !membertype || !address ) {
+		if (!fname || !lname || !phone || !email || !pwd || !membertype || !address || !legalinfo ) {
 			return res.status(400).json({ error: "All fields are required please input again" }); 
 		}
 	
@@ -122,12 +122,14 @@ exports.registerTsuper = function (req, res) {
 			});
 			break;
 		case 2:
-			var strval = [fname,lname,email,pwd,address,phone,membertype]
+			// var strval = [fname,lname,email,pwd,address,phone,membertype]
+			var strval = [fname,lname,email,pwd,address,phone,membertype,legalinfo]
 			// var strsql = "INSERT INTO testuse (FirstName, LastName, Email, Password, CurrentAddress, PhoneNumber, MemberType) VALUES (?,?,?,?,?,?,?)";
 			var strsql = "INSERT INTO users "
 						+"(FirstName, LastName, Email, Password,"
-						+"CurrentAddress, PhoneNumber, MemberType) "
-						+"VALUES(?,?,?,?,?,?,?)";
+						+"CurrentAddress, PhoneNumber, MemberType, LegalProofPhotos,"
+						+"Extra1, Extra2, Status) "
+						+"VALUES(?,?,?,?,?,?,?,?,'.','.','ACTIVE')";
 			mysqltrigger.insertQuery(connection.tsuper_connect, strsql, strval, '[account.js -> registerTsuper()]', function (result) {
 			if (result == 'error') {
 				return res.status(500).json({ status: 'error', message: 'Server Error' });
