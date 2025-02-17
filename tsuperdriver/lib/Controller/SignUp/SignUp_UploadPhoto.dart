@@ -122,7 +122,10 @@ extension extSignUpUploadPhoto on _SignUpVC {
       // upload driver license info
       // ---- driver back license here....
       var storageRef = FirebaseStorage.instance.ref("driver and car/${driverLicenseFront[1]}.jpg");
+      var storageRefb = FirebaseStorage.instance.ref("driver and car/${driverLicenseBack[1]}.jpg");
+
       uploadDriverLicense(legalInfo,storageRef);
+      uploadDriverlBack(legalInfo,storageRefb);
       // upload valid id info
       // storageRef = FirebaseStorage.instance.ref("driver and car/${driverLicenseBack[1]}.jpg");
       
@@ -158,7 +161,7 @@ extension extSignUpUploadPhoto on _SignUpVC {
         return;
       }
     }
-    print("Display current LEGALINFO: ${legalInfo}");
+    print("Display current LEGALINFO with VALID ID: ${legalInfo}");
     createUserEmail(legalInfo);
   }
 
