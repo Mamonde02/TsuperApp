@@ -229,37 +229,6 @@ exports.fetchAllUsers = function (req, res) {
 	step(1);
 }
 
-// >>>>>>>>>>> deleteadmin
-exports.deleteUserAdmin = function (req, res) {
-	const body = req.body;
-	const memberType = body.memberType;
-	const id = body.id;
-
-	var resultdata = JSON.stringify({});
-    function step(i){
-		switch (i) {
-		case 1:
-			var strval = [memberType,id]
-			var strsql = "DELETE FROM users WHERE MemberType=? AND ID=?";
-			mysqltrigger.selectAllQuery(connection.tsuper_connect, strsql, strval, '[account.js -> deleteUser()]', function (result) {
-				if (result == 'error') {
-					var resultObj = {'data': resultdata, 'status': 'error', 'message': 'Server Error'};
-					res.json(resultObj);
-				}else{
-					var resultObj = {
-						"data": [],
-						"status": "000",
-						"message": "Success"
-					}
-					res.json(resultObj);
-				}
-			});
-			break;
-		default:
-			break;
-		}
-	}
-
 exports.deleteUser = function (req, res) {
 	const body = req.body;
 	const memberType = body.memberType;
@@ -343,5 +312,4 @@ exports.updateProfilePic = function (req, res) {
 			res.json(resultObj);
 		}
 	});
-}
 }
