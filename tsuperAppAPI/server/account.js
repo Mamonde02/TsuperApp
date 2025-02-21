@@ -313,3 +313,29 @@ exports.updateProfilePic = function (req, res) {
 		}
 	});
 }
+
+exports.confirmUser = function (req, res) {
+	const body = req.body;
+	const id = body.id;
+
+	var resultdata = JSON.stringify({});
+	var strval = [id]
+	var strsql = "UPDATE users SET Status='Confirm' WHERE ID=?";
+	mysqltrigger.updateQuery(connection.tsuper_connect, strsql, strval, '[account.js -> updateUser()]', function (result) {
+		if (result == 'error') {
+			var resultObj = {
+				'data': resultdata, 
+				'status': 'error', 
+				'message': 'Server Error'
+			};
+			res.json(resultObj);
+		}else{
+			var resultObj = {
+				"data": [],
+				"status": "000",
+				"message": "Success UPDATE"
+			}
+			res.json(resultObj);
+		}
+	});
+}
