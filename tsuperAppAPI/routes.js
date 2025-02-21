@@ -204,6 +204,11 @@ module.exports = function (app){
 			res.json(result);
 		})
 	});
+	app.post("/api/confirmUser", function (req, res) {
+		accController.confirmUser(req, res, function  (result) {
+			res.json(result);
+		})
+	});
 	app.post("/api/specialBooking", function (req, res) {
 		bookingController.specialBooking(req, res, function  (result) {
 			res.json(result);
