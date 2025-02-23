@@ -26,4 +26,26 @@ extension extEditAPIRelated on _EditVC {
       showPromptModal(context, "error", message);
     }
   }
+
+  void confirmUser(UserAccountDataModel i) async {
+    Map<String, dynamic> params = {
+      "id": i.ID
+    };
+
+    RepoClass repoClass = RepoClass();
+    Map<String,dynamic> jsonDecoded = await repoClass.didStart_CallAPI("api/confirmUser", {}, params);
+
+    final status = jsonDecoded["status"].toString();
+    final message = jsonDecoded["message"].toString();
+
+    if (status == "000"){
+       print(message);
+      if (!mounted) return;
+      Navigator.of(context).pop("YES");
+
+    }else{
+      if (!mounted) return;
+      showPromptModal(context, "error", message);
+    }
+  }
 }
