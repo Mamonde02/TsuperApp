@@ -239,6 +239,21 @@ class _EditVCtwo extends State<EditVCtwo> {
               onPressed: (){
                 // updateUser(widget.acc);
                 confirmUser(widget.acc);
+
+               // Toast message
+                ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(content: Text(
+                      "Successfully user Confirm.", 
+                      style: TextStyle(
+                        fontSize: 17, 
+                        color: Colors.white, 
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    backgroundColor: Color(0xFFff7a01),
+                    behavior: SnackBarBehavior.floating,
+                  ),
+                );
               },
               child: const Padding(
                 padding: EdgeInsets.symmetric(vertical: 10),
