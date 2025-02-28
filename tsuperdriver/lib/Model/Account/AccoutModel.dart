@@ -9,6 +9,7 @@ class UserAccountDataModel {
   String CurrentAddress;
   String PhoneNumber;
   String MemberType;
+  String? Status;
   String? ProfilePic;
   final String? LegalProofPhotos;
   final String? Extra1;
@@ -25,6 +26,7 @@ class UserAccountDataModel {
       this.CurrentAddress,
       this.PhoneNumber,
       this.MemberType,
+      this.Status,
       this.ProfilePic,
       this.LegalProofPhotos,
       this.Extra1,
@@ -40,6 +42,7 @@ class UserAccountDataModel {
       data["CurrentAddress"],
       data["PhoneNumber"],
       data["MemberType"],
+      data["Status"] ?? "",
       data["ProfilePic"] ?? "",
       data["LegalProofPhotos"] != null
           ? jsonEncode(data["LegalProofPhotos"]).toString()
@@ -58,6 +61,7 @@ class UserAccountDataModel {
         'CurrentAddress': CurrentAddress,
         'PhoneNumber': PhoneNumber,
         'MemberType': MemberType,
+        'Status': Status,
         'ProfilePic': ProfilePic,
         'LegalProofPhotos': LegalProofPhotos,
         'Extra1': Extra1,
