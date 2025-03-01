@@ -25,8 +25,9 @@ extension extUsersListView on _UsersVC {
             const DataColumn(label: Text('First Name', style: style1)),
             const DataColumn(label: Text('Last Name', style: style1)),
             const DataColumn(label: Text('Email', style: style1)),
-            const DataColumn(label: Text('Current Address', style: style1)),
+            // const DataColumn(label: Text('Current Address', style: style1)),
             const DataColumn(label: Text('Member Type', style: style1)),
+            const DataColumn(label: Text('Status', style: style1)),
             DataColumn(label: Text('Action', style: style2)),
           ],
           rows: List.generate(displayedUsersData.length, (i) {
@@ -35,8 +36,9 @@ extension extUsersListView on _UsersVC {
               DataCell(Text(displayedUsersData[i].FirstName.toString())),
               DataCell(Text(displayedUsersData[i].LastName.toString())),
               DataCell(Text(displayedUsersData[i].Email.toString())),
-              DataCell(Text(displayedUsersData[i].CurrentAddress.toString())),
+              // DataCell(Text(displayedUsersData[i].CurrentAddress.toString())),
               DataCell(Text(displayedUsersData[i].MemberType.toString())),
+              DataCell(formatStatusVIEW(displayedUsersData[i].Status.toString())),
               DataCell(Row(
                 children: [
                   InkWell(
@@ -92,5 +94,39 @@ extension extUsersListView on _UsersVC {
         if (value == "YES") {fetchAllUsers()}
       },
     );
+  }
+
+ 
+  Widget formatStatusVIEW(String status){
+    switch (status) {
+      case "PENDING":
+        return
+        Container(
+          padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+          color: gkGetColor(PickClr.gkBtnColor),
+          child: Text(status, style: const TextStyle(color: Colors.white))
+        );
+      case "Confirm":
+        return
+        Container(
+          padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+          color: Colors.green,
+          child: Text(status, style: const TextStyle(color: Colors.white))
+        );
+      case "ACTIVE":
+        return
+        Container(
+          padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+          color: Colors.red,
+          child: Text(status, style: const TextStyle(color: Colors.white))
+        );
+      default:
+        return
+        Container(
+          padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+          color: gkGetColor(PickClr.gkBtnColor),
+          child: Text(status, style: TextStyle(color: Colors.white))
+        );
+    }
   }
 }
