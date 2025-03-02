@@ -243,14 +243,14 @@ class _EditVCtwo extends State<EditVCtwo> {
                // Toast message
                 ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(content: Text(
-                      "Successfully user Confirm.", 
+                      "Successfully User Confirm.", 
                       style: TextStyle(
-                        fontSize: 17, 
+                        fontSize: 15, 
                         color: Colors.white, 
                         fontWeight: FontWeight.w500,
                       ),
                     ),
-                    backgroundColor: Color(0xFFff7a01),
+                    backgroundColor: Colors.green,
                     behavior: SnackBarBehavior.floating,
                   ),
                 );
