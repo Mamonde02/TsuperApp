@@ -34,22 +34,42 @@ extension extSearchDrop on _UsersVC {
         }).toList(),
 
         onChanged: (value) {
-          setState(() {
-            selectedMemberStatus = value!;
-            // amountListOfRegular();
+          selectedMemberStatus = value!;
+          if (value.isEmpty) {
+            displayedUsersData = allUsersData;
+          } else {
+            displayedUsersData = allUsersData.where((e) {
+              final fullName =
+                  "${e.FirstName.toLowerCase()} ${e.LastName.toLowerCase()}";
+              final memberType = e.MemberType.toLowerCase() == "carowner"
+                  ? "Car Owner"
+                  : e.MemberType;
+              final memberStatus = e.Status.toLowerCase();
 
-            displayedUsersData = allUsersData.where(
-              (e) {
-                // final fullName =
-                //     "${e.FirstName.toLowerCase()} ${e.LastName.toLowerCase()}";
-                final memberType = e.Status.contains(value);
-                
-                return memberType;
-              },
-            ).toList();
-          });
+              return fullName.contains(value.toLowerCase()) ||
+                  memberType.toLowerCase().contains(value.toLowerCase()) ||
+                  memberStatus.toLowerCase().contains(value.toLowerCase());
+            }).toList();
+          }
+
+          refreshState();
         },
       ),
     );
   }
 }
+
+          // setState(() {
+          //   selectedMemberStatus = value!;
+          //   // amountListOfRegular();
+
+          //   displayedUsersData = allUsersData.where(
+          //     (e) {
+          //       // final fullName =
+          //       //     "${e.FirstName.toLowerCase()} ${e.LastName.toLowerCase()}";
+          //       final memberType = e.Status.contains(value);
+                
+          //       return memberType;
+          //     },
+          //   ).toList();
+          // });
