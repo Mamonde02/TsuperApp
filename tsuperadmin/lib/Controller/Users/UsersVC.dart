@@ -13,6 +13,7 @@ import '../../Server/Repo.dart';
 part 'Users_API_Related.dart';
 part 'Users_SearchTxt.dart';
 part 'Users_ListView.dart';
+part 'UserSearchDrop.dart';
 
 class UsersVC extends StatefulWidget {
   @override
@@ -24,7 +25,9 @@ class _UsersVC extends State<UsersVC> {
   List<UserAccountDataModel> displayedUsersData = [];
   TextEditingController searchTxtController = TextEditingController();
   String selectedMemberType = "";
+  String selectedMemberStatus = "";
   List<String> listOfMemberType = ["", "Car Owner", "Driver"];
+  List<String> listOfMemberStatus = ["", "ACTIVE", "Confirm"];
 
   @override
   void initState() {
@@ -67,6 +70,7 @@ class _UsersVC extends State<UsersVC> {
           const SizedBox(height: 10),
           searchDropTxtView(),
           const SizedBox(height: 10),
+          searchDropStatusUI(),
           usersListVIEW()
         ],
       ),
