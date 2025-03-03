@@ -33,6 +33,21 @@ class _UsersVC extends State<UsersVC> {
     super.initState();
   }
 
+  void seachDropType(value) {
+    setState(() {
+      selectedMemberType = value!;
+      // amountListOfRegular();
+
+      displayedUsersData = allUsersData.where((e) {
+        // final fullName =
+        //     "${e.FirstName.toLowerCase()} ${e.LastName.toLowerCase()}";
+        final memberType = e.MemberType.contains(value);
+        return memberType;
+        // memberType.toLowerCase().contains(value.toLowerCase());
+      }).toList();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -129,18 +144,7 @@ class _UsersVC extends State<UsersVC> {
         }).toList(),
 
         onChanged: (value) {
-          setState(() {
-            selectedMemberType = value!;
-            // amountListOfRegular();
-
-            displayedUsersData = allUsersData.where((e) {
-              // final fullName =
-              //     "${e.FirstName.toLowerCase()} ${e.LastName.toLowerCase()}";
-              final memberType = e.MemberType.contains(value);
-              return memberType;
-              // memberType.toLowerCase().contains(value.toLowerCase());
-            }).toList();
-          });
+          seachDropType(value);
         },
       ),
     );
