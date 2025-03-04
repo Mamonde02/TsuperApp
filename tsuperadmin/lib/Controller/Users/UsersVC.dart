@@ -68,9 +68,13 @@ class _UsersVC extends State<UsersVC> {
             ),
           ),
           const SizedBox(height: 10),
-          searchDropTxtView(),
-          const SizedBox(height: 10),
-          searchDropStatusUI(),
+          Row(children: [
+            searchDropTxtView(),
+            const SizedBox(width: 24),
+            searchDropStatusUI(),
+          ]),
+          // const SizedBox(height: 10),
+          // searchDropStatusUI(),
           usersListVIEW()
         ],
       ),
@@ -114,7 +118,7 @@ class _UsersVC extends State<UsersVC> {
         });
   }
 
-  // drop down
+  // drop down User Type
   Widget searchDropTxtView() {
     return Container(
       // padding: const EdgeInsets.only(left: 15),
@@ -126,9 +130,9 @@ class _UsersVC extends State<UsersVC> {
         dropdownColor: Colors.white,
         borderRadius: BorderRadius.circular(3),
         underline: const SizedBox.shrink(),
-        isExpanded: true,
+        // isExpanded: true,
         hint: Text(
-          "Select Member Type",
+          "Select User Type",
           style:
               TextStyle(fontWeight: FontWeight.w500, color: Colors.grey[400]),
         ),
