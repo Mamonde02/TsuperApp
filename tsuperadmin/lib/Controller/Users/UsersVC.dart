@@ -64,7 +64,14 @@ class _UsersVC extends State<UsersVC> {
             height: 70,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
-              children: [searchTxtView(), const SizedBox(width: 30)],
+              children: [
+                searchDropStatusUI(),
+                const SizedBox(width: 12),
+                searchDropTxtView(),
+                const SizedBox(width: 12),
+                searchTxtView(),
+                const SizedBox(width: 30),
+              ],
             ),
           ),
           const SizedBox(height: 10),
