@@ -30,20 +30,21 @@ extension extUsersListView on _UsersVC {
             const DataColumn(label: Text('Status', style: style1)),
             DataColumn(label: Text('Action', style: style2)),
           ],
-          rows: List.generate(displayedUsersData.length, (i) {
+          rows: List.generate(filteredUsers.length, (i) {
+            // final user = filteredUsers[i];
             return DataRow(cells: [
-              DataCell(Text(displayedUsersData[i].ID.toString())),
-              DataCell(Text(displayedUsersData[i].FirstName.toString())),
-              DataCell(Text(displayedUsersData[i].LastName.toString())),
-              DataCell(Text(displayedUsersData[i].Email.toString())),
-              // DataCell(Text(displayedUsersData[i].CurrentAddress.toString())),
-              DataCell(Text(displayedUsersData[i].MemberType.toString())),
-              DataCell(formatStatusVIEW(displayedUsersData[i].Status.toString())),
+              DataCell(Text(filteredUsers[i].ID.toString())),
+              DataCell(Text(filteredUsers[i].FirstName.toString())),
+              DataCell(Text(filteredUsers[i].LastName.toString())),
+              DataCell(Text(filteredUsers[i].Email.toString())),
+              // DataCell(Text(filteredUsers[i].CurrentAddress.toString())),
+              DataCell(Text(filteredUsers[i].MemberType.toString())),
+              DataCell(formatStatusVIEW(filteredUsers[i].Status.toString())),
               DataCell(Row(
                 children: [
                   InkWell(
                     onTap: () {
-                      showEditConfirm(displayedUsersData[i]);
+                      showEditConfirm(filteredUsers[i]);
                     },
                     child: Icon(
                       Icons.person,
@@ -53,7 +54,7 @@ extension extUsersListView on _UsersVC {
                   const SizedBox(width: 7),
                   InkWell(
                     onTap: () {
-                      showEditProfileModal(displayedUsersData[i]);
+                      showEditProfileModal(filteredUsers[i]);
                     },
                     child: const Icon(Icons.edit, color: Colors.blue),
                   ),
@@ -62,7 +63,7 @@ extension extUsersListView on _UsersVC {
                     onTap: () {
                       showConfirmationPromptModal(
                           "Are you sure you want to delete this user?",
-                          displayedUsersData[i]);
+                          filteredUsers[i]);
                     },
                     child: const Icon(
                       Icons.delete,
