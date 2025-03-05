@@ -28,12 +28,59 @@ class _UsersVC extends State<UsersVC> {
   String selectedMemberStatus = "";
   List<String> listOfMemberType = ["", "Car Owner", "Driver"];
   List<String> listOfMemberStatus = ["", "ACTIVE", "Confirm"];
+  List<UserAccountDataModel> filteredUsers = [];
 
   @override
   void initState() {
     fetchAllUsers();
 
+    filterUsers();
+
     super.initState();
+  }
+
+  void filterUsers() {
+    setState(() {
+      if (allUsersData.isEmpty) {
+        filteredUsers = allUsersData;
+        print('Render data FilterUsers');
+      }
+      
+      filteredUsers = allUsersData.where((user) {
+        // Combine FirstName and LastName
+        final fullName =
+            "${user.FirstName.toLowerCase()} ${user.LastName.toLowerCase()}";
+
+        // Get search text (converted to lowercase)
+        final searchQuery = searchTxtController.text.toLowerCase();
+
+        // Check if fullName contains the search query
+        bool matchesSearch = fullName.contains(searchQuery);
+
+        // bool matchesSearch = user.FirstName.toLowerCase()
+        //     .contains(searchTxtController.text.toLowerCase());
+
+        bool matchesRole = selectedMemberType.isEmpty ||
+            user.MemberType.toLowerCase() == selectedMemberType.toLowerCase();
+
+        print("searchmatches: $matchesSearch, rolematches: $matchesRole");
+
+        return matchesSearch && matchesRole;
+      }).toList();
+
+      // DisplayedUsers = allUsersData.where((e) {
+      //   final fullName =
+      //       "${e.FirstName.toLowerCase()} ${e.LastName.toLowerCase()}";
+      //   final memberType = e.MemberType.toLowerCase() == "carowner"
+      //       ? "Car Owner"
+      //       : e.MemberType;
+      //   final memberStatus = e.Status.toLowerCase();
+
+      //   return fullName.contains((searchTxtController.text)) ||
+      //       memberType.toLowerCase().contains(selectedMemberType) ||
+      //       memberStatus.toLowerCase().contains(selectedMemberStatus);
+      // }).toList();
+    });
   }
 
   void seachDropType(value) {
@@ -145,6 +192,7 @@ class _UsersVC extends State<UsersVC> {
         ),
         elevation: 2,
         value: selectedMemberType == "" ? null : selectedMemberType,
+        // value: selectedMemberType,
 
         // Down Arrow Icon
         icon: Icon(Icons.arrow_drop_down, size: 35, color: Colors.grey[600]!),
@@ -158,8 +206,15 @@ class _UsersVC extends State<UsersVC> {
           );
         }).toList(),
 
-        onChanged: (value) {
-          seachDropType(value);
+        // onChanged: (value) {
+        //   seachDropType(value);
+        // },
+        onChanged: (String? newValue) {
+          setState(() {
+            selectedMemberType = newValue ?? "";
+            filterUsers();
+            print("selectedMemberType =>: $selectedMemberType");
+          });
         },
       ),
     );
