@@ -41,9 +41,9 @@ class _UsersVC extends State<UsersVC> {
 
   void filterUsers() {
     setState(() {
+      // testing you can remove this still working
       if (allUsersData.isEmpty) {
         filteredUsers = allUsersData;
-        print('Render data FilterUsers');
       }
 
       filteredUsers = allUsersData.where((user) {
@@ -63,9 +63,12 @@ class _UsersVC extends State<UsersVC> {
         bool matchesRole = selectedMemberType.isEmpty ||
             user.MemberType.toLowerCase() == selectedMemberType.toLowerCase();
 
-        print("searchmatches: $matchesSearch, rolematches: $matchesRole");
+        bool matchesStatus = selectedMemberStatus.isEmpty ||
+            user.Status.toLowerCase() == selectedMemberStatus.toLowerCase();
 
-        return matchesSearch && matchesRole;
+        print("display Matches: $matchesStatus"); // working
+
+        return matchesSearch && matchesRole && matchesStatus;
       }).toList();
 
       // DisplayedUsers = allUsersData.where((e) {
@@ -122,13 +125,6 @@ class _UsersVC extends State<UsersVC> {
             ),
           ),
           const SizedBox(height: 10),
-          Row(children: [
-            searchDropTxtView(),
-            const SizedBox(width: 24),
-            searchDropStatusUI(),
-          ]),
-          // const SizedBox(height: 10),
-          // searchDropStatusUI(),
           usersListVIEW()
         ],
       ),
@@ -195,7 +191,6 @@ class _UsersVC extends State<UsersVC> {
         ),
         elevation: 2,
         value: selectedMemberType == "" ? null : selectedMemberType,
-        // value: selectedMemberType,
 
         // Down Arrow Icon
         icon: Icon(Icons.arrow_drop_down, size: 35, color: Colors.grey[600]!),
@@ -221,7 +216,6 @@ class _UsersVC extends State<UsersVC> {
           setState(() {
             selectedMemberType = newValue ?? "";
             filterUsers();
-            print("selectedMemberType =>: $selectedMemberType");
           });
         },
       ),

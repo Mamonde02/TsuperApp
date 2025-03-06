@@ -24,6 +24,8 @@ extension extSearchDrop on _UsersVC {
         elevation: 2,
         value: selectedMemberStatus == "" ? null : selectedMemberStatus,
 
+        // value: selectedMemberType == "" ? null : selectedMemberType,
+
         // Down Arrow Icon
         icon: Icon(Icons.arrow_drop_down, size: 35, color: Colors.grey[600]!),
 
@@ -41,26 +43,32 @@ extension extSearchDrop on _UsersVC {
           );
         }).toList(),
 
-        onChanged: (value) {
-          selectedMemberStatus = value!;
-          if (value.isEmpty) {
-            displayedUsersData = allUsersData;
-          } else {
-            displayedUsersData = allUsersData.where((e) {
-              final fullName =
-                  "${e.FirstName.toLowerCase()} ${e.LastName.toLowerCase()}";
-              final memberType = e.MemberType.toLowerCase() == "carowner"
-                  ? "Car Owner"
-                  : e.MemberType;
-              final memberStatus = e.Status.toLowerCase();
+        // onChanged: (value) {
+        //   selectedMemberStatus = value!;
+        //   if (value.isEmpty) {
+        //     displayedUsersData = allUsersData;
+        //   } else {
+        //     displayedUsersData = allUsersData.where((e) {
+        //       final fullName =
+        //           "${e.FirstName.toLowerCase()} ${e.LastName.toLowerCase()}";
+        //       final memberType = e.MemberType.toLowerCase() == "carowner"
+        //           ? "Car Owner"
+        //           : e.MemberType;
+        //       final memberStatus = e.Status.toLowerCase();
 
-              return fullName.contains(value.toLowerCase()) ||
-                  memberType.toLowerCase().contains(value.toLowerCase()) ||
-                  memberStatus.toLowerCase().contains(value.toLowerCase());
-            }).toList();
-          }
+        //       return fullName.contains(value.toLowerCase()) ||
+        //           memberType.toLowerCase().contains(value.toLowerCase()) ||
+        //           memberStatus.toLowerCase().contains(value.toLowerCase());
+        //     }).toList();
+        //   }
 
-          refreshState();
+        //   refreshState();
+        // },
+        onChanged: (String? newValue) {
+          setState(() {
+            selectedMemberStatus = newValue ?? "";
+            filterUsers();
+          });
         },
       ),
     );
