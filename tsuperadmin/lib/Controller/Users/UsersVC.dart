@@ -45,7 +45,7 @@ class _UsersVC extends State<UsersVC> {
         filteredUsers = allUsersData;
         print('Render data FilterUsers');
       }
-      
+
       filteredUsers = allUsersData.where((user) {
         // Combine FirstName and LastName
         final fullName =
@@ -175,7 +175,7 @@ class _UsersVC extends State<UsersVC> {
   // drop down User Type
   Widget searchDropTxtView() {
     return Container(
-      // padding: const EdgeInsets.only(left: 15),
+      padding: const EdgeInsets.only(left: 15),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(2.5),
@@ -187,8 +187,11 @@ class _UsersVC extends State<UsersVC> {
         // isExpanded: true,
         hint: Text(
           "Select User Type",
-          style:
-              TextStyle(fontWeight: FontWeight.w500, color: Colors.grey[400]),
+          style: TextStyle(
+            fontWeight: FontWeight.w500,
+            color: Colors.grey[400],
+            fontSize: 15,
+          ),
         ),
         elevation: 2,
         value: selectedMemberType == "" ? null : selectedMemberType,
@@ -201,8 +204,13 @@ class _UsersVC extends State<UsersVC> {
         items: listOfMemberType.map((String items) {
           return DropdownMenuItem(
             value: items,
-            child: Text(items,
-                style: const TextStyle(fontWeight: FontWeight.w500)),
+            child: Text(
+              items,
+              style: const TextStyle(
+                fontWeight: FontWeight.w500,
+                fontSize: 15,
+              ),
+            ),
           );
         }).toList(),
 

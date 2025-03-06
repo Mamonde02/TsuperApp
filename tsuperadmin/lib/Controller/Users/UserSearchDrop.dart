@@ -1,9 +1,10 @@
 part of 'UsersVC.dart';
 
 extension extSearchDrop on _UsersVC {
+  // User STATUS Dropdown
   Widget searchDropStatusUI() {
     return Container(
-      // padding: const EdgeInsets.only(left: 15),
+      padding: const EdgeInsets.only(left: 15),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(2.5),
@@ -14,9 +15,11 @@ extension extSearchDrop on _UsersVC {
         underline: const SizedBox.shrink(),
         // isExpanded: true,
         hint: Text(
-          "Choose user Status...",
-          style:
-              TextStyle(fontWeight: FontWeight.w500, color: Colors.grey[400]),
+          "Choose User Status",
+          style: TextStyle(
+              fontWeight: FontWeight.w500,
+              color: Colors.grey[400],
+              fontSize: 15),
         ),
         elevation: 2,
         value: selectedMemberStatus == "" ? null : selectedMemberStatus,
@@ -28,8 +31,13 @@ extension extSearchDrop on _UsersVC {
         items: listOfMemberStatus.map((String items) {
           return DropdownMenuItem(
             value: items,
-            child: Text(items,
-                style: const TextStyle(fontWeight: FontWeight.w500)),
+            child: Text(
+              items,
+              style: const TextStyle(
+                fontWeight: FontWeight.w500,
+                fontSize: 15,
+              ),
+            ),
           );
         }).toList(),
 
