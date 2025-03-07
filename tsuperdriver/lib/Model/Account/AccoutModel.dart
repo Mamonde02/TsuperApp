@@ -9,7 +9,7 @@ class UserAccountDataModel {
   String CurrentAddress;
   String PhoneNumber;
   String MemberType;
-  String? Status;
+  String Status;
   String? ProfilePic;
   final String? LegalProofPhotos;
   final String? Extra1;
