@@ -97,37 +97,44 @@ extension extUsersListView on _UsersVC {
     );
   }
 
- 
-  Widget formatStatusVIEW(String status){
+  Widget formatStatusVIEW(String status) {
     switch (status) {
       case "PENDING":
-        return
-        Container(
-          padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-          color: gkGetColor(PickClr.gkBtnColor),
-          child: Text(status, style: const TextStyle(color: Colors.white))
-        );
+        return Container(
+            padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+            color: gkGetColor(PickClr.gkBtnColor),
+            child: Text(status, style: const TextStyle(color: Colors.white)));
       case "Confirm":
-        return
-        Container(
-          padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-          color: Colors.green,
-          child: Text(status, style: const TextStyle(color: Colors.white))
-        );
+        return Container(
+            padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+            color: Colors.green,
+            // add icon here
+            child: Row(
+              children: [
+                const Icon(Icons.check, color: Colors.white),
+                const SizedBox(width: 1.2),
+                Text(status,
+                    style: const TextStyle(
+                      color: Colors.white,
+                    )),
+              ],
+            ));
       case "ACTIVE":
-        return
-        Container(
-          padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-          color: Colors.red,
-          child: Text(status, style: const TextStyle(color: Colors.white))
-        );
+        return Container(
+            padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+            color: Colors.red,
+            child: Row(
+              children: [
+                const Icon(Icons.question_mark_outlined, color: Colors.white),
+                const SizedBox(width: 1.2),
+                Text(status, style: const TextStyle(color: Colors.white)),
+              ],
+            ));
       default:
-        return
-        Container(
-          padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-          color: gkGetColor(PickClr.gkBtnColor),
-          child: Text(status, style: TextStyle(color: Colors.white))
-        );
+        return Container(
+            padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+            color: gkGetColor(PickClr.gkBtnColor),
+            child: Text(status, style: const TextStyle(color: Colors.white)));
     }
   }
 }
