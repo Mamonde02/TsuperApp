@@ -13,17 +13,16 @@ import 'Notification/Notification.dart';
 
 part 'Home_HeaderView.dart';
 part 'Home_MenuService.dart';
+part 'Home_Confirmation.dart';
 
 class HomeVC extends StatefulWidget {
   const HomeVC({super.key});
-
 
   @override
   State<HomeVC> createState() => _HomeVC();
 }
 
 class _HomeVC extends State<HomeVC> {
-
   @override
   void initState() {
     super.initState();
@@ -31,23 +30,22 @@ class _HomeVC extends State<HomeVC> {
 
   @override
   Widget build(BuildContext context) {
-    return
-    Scaffold(
+    return Scaffold(
       backgroundColor: gkGetColor(PickClr.gkBGStyle1),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           headerTitleView(),
-
           const Spacer(),
-          homeMenuServices(),
-          const Spacer(),
+          userData?.Status == "Confirm"
+              ? homeMenuServices()
+              : homeConfirmation()
         ],
       ),
     );
   }
 
-  void refreshState(){
+  void refreshState() {
     setState(() {});
   }
 }
