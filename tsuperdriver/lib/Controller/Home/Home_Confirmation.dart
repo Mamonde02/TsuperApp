@@ -34,7 +34,9 @@ extension extHomeConfirmation on _HomeVC {
                 style: const TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.w500,
-                  color: Colors.black,
+                  color: Colors.black54,
+                  fontFamily: "SF-Pro-Round-Bold",
+                  fontStyle: FontStyle.normal,
                 ),
               ),
               const SizedBox(width: 2),
@@ -80,7 +82,7 @@ extension extHomeConfirmation on _HomeVC {
           spacer(24),
           Container(
             // height: 130,
-            margin: const EdgeInsetsDirectional.only(bottom: 10),
+            margin: const EdgeInsetsDirectional.only(top: 88),
             padding: const EdgeInsets.all(24),
             color: gkGetColor(PickClr.tsuperTheme),
             child: const Center(
