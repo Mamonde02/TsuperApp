@@ -17,6 +17,7 @@ extension extUsersAPIRelated on _UsersVC {
 
       allUsersData = decodedData;
       displayedUsersData = decodedData;
+      filteredUsers = decodedData;
       refreshState();
     }else{
       if (!mounted) return;

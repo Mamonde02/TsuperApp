@@ -15,6 +15,9 @@ extension extAPIRelated on _SignUpVC {
     RepoClass repoClass = RepoClass();
     Map<String,dynamic> jsonDecoded = await repoClass.didStart_CallAPI("api/validateIfUserExist", {}, params);
 
+    // print(jsonDecoded);
+    print("step 1 > Validate user: ${jsonDecoded}"); 
+
     final status = jsonDecoded["status"].toString();
     final message = jsonDecoded["message"].toString();
     if (status != "000"){
@@ -23,15 +26,17 @@ extension extAPIRelated on _SignUpVC {
       showPromptModal(context, "error", message);
       return false;
     }
+    print("step 2 > User validation successful, proceeding next");
     return true;
   }
 
   void registerTsuper(Map<String, dynamic> legalInformations) async {
+    print("step 3 > Registering Tsuper user........");
     final pwd = pwdTxtController.text.getSha1();
     final params = {
       "fname": fnameTxtController.text,
       "lname": lnameTxtController.text,
-      "address": currentAddress,
+      "address": currentAddress, // potencial error 
       "phone": phoneNumTxtController.text,
       "email": emailTxtController.text,
       "pwd": pwd,
@@ -39,8 +44,15 @@ extension extAPIRelated on _SignUpVC {
       "legalinfo": legalInformations
     };
 
+    print("DISPLAY DEDUG: ${legalInformations}");
+    print(params);
+
     RepoClass repoClass = RepoClass();
     Map<String,dynamic> jsonDecoded = await repoClass.didStart_CallAPI("api/registerTsuper", {}, params);
+
+    // print(params);
+    // not process this process something wrong...
+    print("step 4 > Register tsuper response: ${jsonDecoded}");
 
     final status = jsonDecoded["status"].toString();
     final message = jsonDecoded["message"].toString();
@@ -95,5 +107,6 @@ extension extAPIRelated on _SignUpVC {
         }
       }
     });
+    print("Display showEmailfunction${legalInfo}");
   }
 }

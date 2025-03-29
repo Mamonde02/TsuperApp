@@ -89,45 +89,90 @@ var crud = {
     // result:
     //  error - connection error
     //  true - successfully insert
-  insertQuery: function(pool, querystring, querydata, querytag, callback) {
-      var errormsge = "";
+//   insertQuery: function(pool, querystring, querydata, querytag, callback) {
+//       var errormsge = "";
 
-      pool.getConnection(function(err,connection){
+//       pool.getConnection(function(err,connection){
+//         if (err) {
+//             errormsge = {
+//                 querydata: querydata,
+//                 request: querytag + " "+ err,
+//             };
+//             commonlib.writeErrorLogV2("mysqlcontroller.js","crud > insertQuery - 1", errormsge);
+//             callback("error");
+//         }
+
+//         connection.query(querystring, querydata, function(err, result) {
+//             connection.release();
+//             connection.destroy();
+//             if (err) {
+//                 errormsge = {
+//                     querydata: querydata,
+//                     request: querytag + " "+ err,
+//                 };
+//                 commonlib.writeErrorLogV2("mysqlcontroller.js","crud > insertQuery - 2", errormsge);
+//                 callback("error");
+//             }
+//             else{ callback("true"); }
+//         });
+
+//         connection.on('error', function(err) {
+//             connection.release();
+//             connection.destroy();
+//             errormsge = {
+//                 querydata: querydata,
+//                 request: querytag + " "+ err,
+//             };
+//             commonlib.writeErrorLogV2("mysqlcontroller.js","crud > insertQuery - 3", errormsge);
+//             callback("error");
+//         });
+//     });
+//   },
+
+
+// testing new version of insertQuery
+insertQuery: function (pool, querystring, querydata, querytag, callback) {
+    var errormsge = "";
+
+    pool.getConnection(function (err, connection) {
         if (err) {
             errormsge = {
                 querydata: querydata,
-                request: querytag + " "+ err,
+                request: querytag + " " + err,
             };
-            commonlib.writeErrorLogV2("mysqlcontroller.js","crud > insertQuery - 1", errormsge);
+            commonlib.writeErrorLogV2("mysqlcontroller.js", "crud > insertQuery - 1", errormsge);
             callback("error");
+            return; // ✅ Stop execution on error
         }
 
-        connection.query(querystring, querydata, function(err, result) {
-            connection.release();
+        connection.query(querystring, querydata, function (err, result) {
+            connection.release(); // ✅ Properly releasing the connection
             connection.destroy();
+            
             if (err) {
                 errormsge = {
                     querydata: querydata,
-                    request: querytag + " "+ err,
+                    request: querytag + " " + err,
                 };
-                commonlib.writeErrorLogV2("mysqlcontroller.js","crud > insertQuery - 2", errormsge);
+                commonlib.writeErrorLogV2("mysqlcontroller.js", "crud > insertQuery - 2", errormsge);
                 callback("error");
+                return; // ✅ Stop execution on error
+            } else {
+                callback("true");
             }
-            else{ callback("true"); }
         });
 
-        connection.on('error', function(err) {
-            connection.release();
-            connection.destroy();
+        connection.on("error", function (err) {
             errormsge = {
                 querydata: querydata,
-                request: querytag + " "+ err,
+                request: querytag + " " + err,
             };
-            commonlib.writeErrorLogV2("mysqlcontroller.js","crud > insertQuery - 3", errormsge);
+            commonlib.writeErrorLogV2("mysqlcontroller.js", "crud > insertQuery - 3", errormsge);
             callback("error");
+            return; // ✅ Stop execution on error
         });
     });
-  },
+},
 
     //param:
     //  pool - pool from mysqlcontroller.js

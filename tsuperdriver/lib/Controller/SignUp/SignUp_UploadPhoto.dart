@@ -119,8 +119,15 @@ extension extSignUpUploadPhoto on _SignUpVC {
       await carModelUPLOAD(legalInfo,storageRef);
       
     }else{
+      // upload driver license info
+      // ---- driver back license here....
       var storageRef = FirebaseStorage.instance.ref("driver and car/${driverLicenseFront[1]}.jpg");
+      var storageRefb = FirebaseStorage.instance.ref("driver and car/${driverLicenseBack[1]}.jpg");
+
       uploadDriverLicense(legalInfo,storageRef);
+      uploadDriverlBack(legalInfo,storageRefb);
+      // upload valid id info
+      // storageRef = FirebaseStorage.instance.ref("driver and car/${driverLicenseBack[1]}.jpg");
       
       storageRef = FirebaseStorage.instance.ref("driver and car/${validID[1]}.jpg");
       try {
@@ -128,16 +135,33 @@ extension extSignUpUploadPhoto on _SignUpVC {
           contentType: 'image/jpeg',
           customMetadata: {'picked-file-path': validID[0].path},
         );
-        final firebaseUpld = await storageRef.putFile(File(validID[0].path), metadata);
-        final imageURL = await firebaseUpld.ref.getDownloadURL();
+
+        // convert into putdata function
+        XFile? vaIDfile =
+        await ImagePicker().pickImage(source: ImageSource.gallery);
+
+        if (vaIDfile == null) return; // Cancelled
+
+        Uint8List validIDdata = await vaIDfile.readAsBytes();
+
+
+        // new version reference 
+        // storageRef = FirebaseStorage.instance.ref("driver and car/${frontFile.name}.jpg");
+        UploadTask firebaseUpldnew = storageRef.putData(validIDdata, metadata);
+        final imageURL = await (await firebaseUpldnew).ref.getDownloadURL();
         legalInfo["ValidID"] = imageURL;
+
+        // og version
+        // final firebaseUpld = await storageRef.putFile(File(validID[0].path), metadata);
+        // final imageURL = await firebaseUpld.ref.getDownloadURL();
+        // legalInfo["ValidID"] = imageURL;
     
       } on firebase_core.FirebaseException catch (e) {
         print(e);
         return;
       }
     }
-    
+    print("Display current LEGALINFO with VALID ID: ${legalInfo}");
     createUserEmail(legalInfo);
   }
 

@@ -1,5 +1,6 @@
 
 import 'dart:io';
+import 'dart:typed_data';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart' as firebase_core;
@@ -12,6 +13,7 @@ import 'package:tsuperdriver/Components/CommonFunc.dart';
 import 'package:tsuperdriver/Components/GlobalVar.dart';
 import 'package:tsuperdriver/Controller/1.%20CommonUI/Extensions.dart';
 import 'package:tsuperdriver/Controller/1.%20CommonUI/LoadingView.dart';
+import 'package:image_picker/image_picker.dart';
 
 
 import '../../Components/Colors-Design.dart';
@@ -46,7 +48,7 @@ class _SignUpVC extends State<SignUpVC> {
   TextEditingController lnameTxtController = TextEditingController();
   TextEditingController emailTxtController = TextEditingController();
   TextEditingController currentAddressTxtController = TextEditingController();
-  String currentAddress = "";
+  String currentAddress = "Cebu"; // Testing value
   TextEditingController phoneNumTxtController = TextEditingController();
   TextEditingController pwdTxtController = TextEditingController();
   TextEditingController confirmpwdTxtController = TextEditingController();

@@ -89,6 +89,11 @@ exports.registerTsuper = function (req, res) {
 	var pwd = body.pwd
 	var membertype = body.membertype
 	var legalinfo = JSON.stringify(body.legalinfo)
+
+	    // Check if all fields are filled before querying
+		if (!fname || !lname || !phone || !email || !pwd || !membertype || !address || !legalinfo ) {
+			return res.status(400).json({ error: "All fields are required please input again" }); 
+		}
 	
 	var resultdata = JSON.stringify({});
     function step(i){
@@ -98,10 +103,12 @@ exports.registerTsuper = function (req, res) {
 			var strsql = "SELECT Email, PhoneNumber FROM users WHERE Email=? AND PhoneNumber=? AND MemberType=?";
 			mysqltrigger.selectAllQuery(connection.tsuper_connect, strsql, strval, '[account.js -> registerTsuper()]', function (result) {
 			if (result == 'error') {
+				return res.status(500).json({ status: 'error', message: 'Server Error' });
 				var resultObj = {'data': resultdata, 'status': 'error', 'message': 'Server Error'};
 				res.json(resultObj);
 			}else{
 				if (result.length > 0){
+					return res.status(409).json({ status: "001", message: "This account is already registered."});
 					var resultObj = {
 						"data": resultdata,
 						"status": "001",
@@ -115,7 +122,9 @@ exports.registerTsuper = function (req, res) {
 			});
 			break;
 		case 2:
+			// var strval = [fname,lname,email,pwd,address,phone,membertype]
 			var strval = [fname,lname,email,pwd,address,phone,membertype,legalinfo]
+			// var strsql = "INSERT INTO testuse (FirstName, LastName, Email, Password, CurrentAddress, PhoneNumber, MemberType) VALUES (?,?,?,?,?,?,?)";
 			var strsql = "INSERT INTO users "
 						+"(FirstName, LastName, Email, Password,"
 						+"CurrentAddress, PhoneNumber, MemberType, LegalProofPhotos,"
@@ -123,9 +132,11 @@ exports.registerTsuper = function (req, res) {
 						+"VALUES(?,?,?,?,?,?,?,?,'.','.','ACTIVE')";
 			mysqltrigger.insertQuery(connection.tsuper_connect, strsql, strval, '[account.js -> registerTsuper()]', function (result) {
 			if (result == 'error') {
+				return res.status(500).json({ status: 'error', message: 'Server Error' });
 				var resultObj = {'data': resultdata, 'status': 'error', 'message': 'Server Error'};
 				res.json(resultObj);
 			}else{
+				return res.status(201).json({ status: "000", message: "Success", data: resultdata });
 				var resultObj = {
 					"data": resultdata,
 					"status": "000",
@@ -136,15 +147,12 @@ exports.registerTsuper = function (req, res) {
 			});
 			break;
 		default:
-			break;
+			return res.status(500).json({ status: 'error', message: 'Unexpected error' });
+			// break;
 		}
 	}
-	
-   // >>>>>>>>>>>>>>>>>> approve 
 
-	
-
-	// >>>>>>>>>>>>>> decline 
+   step(1); // Start the process
 
 }
 
@@ -220,37 +228,6 @@ exports.fetchAllUsers = function (req, res) {
 	}
 	step(1);
 }
-
-// >>>>>>>>>>> deleteadmin
-exports.deleteUserAdmin = function (req, res) {
-	const body = req.body;
-	const memberType = body.memberType;
-	const id = body.id;
-
-	var resultdata = JSON.stringify({});
-    function step(i){
-		switch (i) {
-		case 1:
-			var strval = [memberType,id]
-			var strsql = "DELETE FROM users WHERE MemberType=? AND ID=?";
-			mysqltrigger.selectAllQuery(connection.tsuper_connect, strsql, strval, '[account.js -> deleteUser()]', function (result) {
-				if (result == 'error') {
-					var resultObj = {'data': resultdata, 'status': 'error', 'message': 'Server Error'};
-					res.json(resultObj);
-				}else{
-					var resultObj = {
-						"data": [],
-						"status": "000",
-						"message": "Success"
-					}
-					res.json(resultObj);
-				}
-			});
-			break;
-		default:
-			break;
-		}
-	}
 
 exports.deleteUser = function (req, res) {
 	const body = req.body;
@@ -336,4 +313,29 @@ exports.updateProfilePic = function (req, res) {
 		}
 	});
 }
+
+exports.confirmUser = function (req, res) {
+	const body = req.body;
+	const id = body.id;
+
+	var resultdata = JSON.stringify({});
+	var strval = [id]
+	var strsql = "UPDATE users SET Status='Confirm' WHERE ID=?";
+	mysqltrigger.updateQuery(connection.tsuper_connect, strsql, strval, '[account.js -> updateUser()]', function (result) {
+		if (result == 'error') {
+			var resultObj = {
+				'data': resultdata, 
+				'status': 'error', 
+				'message': 'Server Error'
+			};
+			res.json(resultObj);
+		}else{
+			var resultObj = {
+				"data": [],
+				"status": "000",
+				"message": "Success UPDATE"
+			}
+			res.json(resultObj);
+		}
+	});
 }

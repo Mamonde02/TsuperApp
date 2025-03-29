@@ -62,8 +62,12 @@ class _HomeTabbarVC extends State<HomeTabbarVC> with SingleTickerProviderStateMi
 
   @override
   Widget build(BuildContext context) {
-    return
-    tsuperHomeTabBar();
+    // return
+    // tsuperHomeTabBar();
+    
+    return (userData?.Status == "ACTIVE")
+        ? tsuperAproval()
+        : tsuperHomeTabBar();
   }
   
   Widget tsuperHomeTabBar(){
@@ -84,6 +88,41 @@ class _HomeTabbarVC extends State<HomeTabbarVC> with SingleTickerProviderStateMi
           children: [
             const HomeVC(),
             (userData?.MemberType != "Driver") ?
+            BookingVC(
+              homeTabbarCtrlr: homeTabbarCtrlr,
+            ) : 
+            const FindBooking(),
+
+            const HistoryVC(),
+            const AccountVC(),
+          ]
+        )
+      )
+    );
+  }
+
+
+  // For admin to approve
+    Widget tsuperAproval(){
+    return 
+    DefaultTabController(
+      length: 3,
+      child: Scaffold(
+        appBar: AppBar(
+          title: const Text("Wait for approve your account to admin"),
+          elevation: 0,
+          toolbarHeight: 0,
+          backgroundColor: gkGetColor(PickClr.tsuperTheme),
+        ),
+        // bottomNavigationBar: tabBottomMenu(),
+
+        body: 
+        TabBarView(
+          physics: const NeverScrollableScrollPhysics(),
+          controller: homeTabbarCtrlr,
+          children: [
+            const HomeVC(),
+            (userData?.MemberType == "Driver") ?
             BookingVC(
               homeTabbarCtrlr: homeTabbarCtrlr,
             ) : 
